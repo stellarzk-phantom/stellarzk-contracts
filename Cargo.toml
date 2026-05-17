@@ -1,0 +1,14 @@
+[workspace]
+members = [
+  "contracts/bn254_verifier",
+  "contracts/poseidon_hasher",
+  "contracts/private_transfer"
+]
+resolver = "2"
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = false
+strip = "symbols"
+panic = "abort"
+codegen-units = 1
