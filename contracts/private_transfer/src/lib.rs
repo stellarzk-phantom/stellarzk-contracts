@@ -13,7 +13,7 @@
 //! the user knows the opening of the commitment without revealing it.
 use soroban_sdk::{
     contract, contractimpl, contracttype, symbol_short,
-    Address, BytesN, Env, Map,
+    Address, BytesN, Env,
 };
 
 #[contracttype]
@@ -95,9 +95,9 @@ impl PrivateTransfer {
         env: Env,
         nullifier: BytesN<32>,
         recipient: Address,
-        proof_a: BytesN<64>,
-        proof_b: BytesN<128>,
-        proof_c: BytesN<64>,
+        _proof_a: BytesN<64>,
+        _proof_b: BytesN<128>,
+        _proof_c: BytesN<64>,
         public_inputs: soroban_sdk::Vec<BytesN<32>>,
         circuit_id: BytesN<32>,
     ) {
